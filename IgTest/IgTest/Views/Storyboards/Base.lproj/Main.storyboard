@@ -24,42 +24,6 @@
             </objects>
             <point key="canvasLocation" x="2168.8000000000002" y="1724.8875562218891"/>
         </scene>
-        <!--登入-->
-        <scene sceneID="y9w-3l-cgP">
-            <objects>
-                <viewController id="gwW-eH-eIZ" customClass="LoginViewController" customModule="IgTest" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="NdY-53-15U">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0q-bd-pxf">
-                                <rect key="frame" x="140" y="543" width="95" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="註冊">
-                                            <attributes>
-                                                <color key="NSColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="16" name="PingFangTC-Regular"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="qnX-hi-WYR" kind="show" id="CqW-gc-yCM"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="VPz-fT-ejM"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="登入" id="kUY-rr-Zgz"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZBD-XX-wqN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1316" y="1235.5322338830586"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="UMr-4z-F8m">
             <objects>
@@ -168,40 +132,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZOW-ij-dt6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1231" y="-385"/>
-        </scene>
-        <!--註冊-->
-        <scene sceneID="bVv-FP-n9G">
-            <objects>
-                <viewController id="qnX-hi-WYR" customClass="RegistViewController" customModule="IgTest" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="iZ3-UG-oXg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="1UQ-td-9p7"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="註冊" id="Arq-oa-JLX"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OT4-05-0xG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-591" y="1236"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="XTS-eC-498">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rBD-an-qRZ" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fe0-ym-SZW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="gwW-eH-eIZ" kind="relationship" relationship="rootViewController" id="BeO-3t-f8W"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xS6-SK-RQJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2164" y="1235.5322338830586"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Jb0-TJ-Ipv">
