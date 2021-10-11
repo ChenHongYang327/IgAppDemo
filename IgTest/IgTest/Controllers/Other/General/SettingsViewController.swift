@@ -5,6 +5,7 @@
 //  Created by 陳鋐洋 on 2021/10/11.
 //
 
+import SafariServices
 import UIKit
 
 struct SettingCellModel {
@@ -43,12 +44,67 @@ final class SettingsViewController: UIViewController {
     }
     
     private func configurModels(){
-        let section = [
+        data.append([
+            SettingCellModel(title: "Edit Profile", handler: { [weak self] in
+                self?.didTapEditPtofile()
+            }),
+            SettingCellModel(title: "Invite Friends", handler: { [weak self] in
+                self?.didTapInviteFriends()
+            }),
+            SettingCellModel(title: "Save Original Posts", handler: { [weak self] in
+                self?.didTapSaveOriginalPosts()
+            })
+        ])
+        data.append([
+            SettingCellModel(title: "Terms of Service", handler: { [weak self] in
+                self?.openURL(type: .terms)
+            }),
+            SettingCellModel(title: "Privacy Policy", handler: { [weak self] in
+                self?.openURL(type: .privacy)
+            }),
+            SettingCellModel(title: "Help / Feedback", handler: { [weak self] in
+                self?.openURL(type: .help)
+            })
+        ])
+      
+        data.append([
             SettingCellModel(title: "Log Out", handler: { [weak self] in
                 self?.didTapLogout()
             })
-        ]
-        data.append(section)
+        ])
+    }
+    
+    enum SettingsURLType{
+        case terms, privacy, help
+    }
+    
+    private func didTapEditPtofile(){}
+    
+    private func didTapInviteFriends(){
+        // show share sheet to invite friends
+    }
+    
+    private func didTapSaveOriginalPosts(){
+        let vc = EditProfileViewController()
+        vc.title = "Edit Profile"
+        let navVC = UINavigationController(rootViewController: vc)
+        present(navVC, animated: true)
+    }
+    
+    private func openURL(type: SettingsURLType){
+        let urlStr: String
+        switch type {
+        case .terms: urlStr = "https://help.instagram.com/581066165581870"
+        case .privacy: urlStr = "https://www.facebook.com/help/instagram/519522125107875"
+        case .help: urlStr = "https://www.facebook.com/help/instagram/?rdrhc"
+        }
+        
+        guard let url = URL(string: urlStr) else {
+            return
+        }
+        let vc = SFSafariViewController(url: url)
+        present(vc, animated: true)
+        
     }
 
     private func didTapLogout(){
@@ -76,7 +132,7 @@ final class SettingsViewController: UIViewController {
                     case .failure(_):
                         // error occured
                         fatalError("Could not log out user")
-                        return
+                        
                     }
                 }
             }
@@ -105,7 +161,7 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource{
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = data[indexPath.section][indexPath.row].title
-        
+        cell.accessoryType = .disclosureIndicator
         return cell
     }
     
