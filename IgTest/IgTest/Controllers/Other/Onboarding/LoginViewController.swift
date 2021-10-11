@@ -231,14 +231,14 @@ class LoginViewController: UIViewController {
             username = usernameEmail
         }
         
-        DispatchQueue.main.async {
-            AuthManager.shared.loginUser(username: username, email: email, password: password) { result in
-                
+        
+        AuthManager.shared.loginUser(username: username, email: email, password: password) { result in
+            
+            DispatchQueue.main.async {
                 switch result{
                 case .success(_):
                     // user login
-                    print("success")
-                    
+                    self.dismiss(animated: true, completion: nil)
                 case .failure(_):
                     let alert = UIAlertController(title: "Log In Fail", message: "We were unable to log you in!", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
@@ -246,6 +246,7 @@ class LoginViewController: UIViewController {
                 }
             }
         }
+        
         
     }
     

@@ -77,4 +77,17 @@ public class AuthManager{
         }
     }
     
+    /// Attempt to log out firebase user
+    public func logOut(completion: (Result<String,Error>) -> Void){
+        do {
+            try Auth.auth().signOut()
+            completion(.success("log out success!"))
+            return
+        } catch let error {
+            print(error.localizedDescription)
+            completion(.failure(error))
+            return
+        }
+    }
+    
 }
