@@ -1,5 +1,5 @@
 //
-//  IGFeedPostTableViewCell.swift
+//  IGFeedPostHeaderTableViewCell.swift
 //  IgTest
 //
 //  Created by 陳鋐洋 on 2021/10/11.
@@ -7,12 +7,13 @@
 
 import UIKit
 
-final class IGFeedPostTableViewCell: UITableViewCell {
+class IGFeedPostHeaderTableViewCell: UITableViewCell {
 
-    static let identifier = "IGFeedPostTableViewCell"
+    static let identifier = "IGFeedPostHeaderTableViewCell"
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        contentView.backgroundColor = .systemBlue
     }
     
     required init?(coder: NSCoder) {
@@ -22,6 +23,10 @@ final class IGFeedPostTableViewCell: UITableViewCell {
     
     public func configure(){
         // configure the cell
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
     }
 
 }
