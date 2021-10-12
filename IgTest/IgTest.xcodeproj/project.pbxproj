@@ -40,6 +40,9 @@
 		4425991C271575C100DD2520 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4425991B271575C100DD2520 /* ListViewController.swift */; };
 		4425991E271594D400DD2520 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4425991D271594D400DD2520 /* SearchViewController.swift */; };
 		442599202715990900DD2520 /* UserFollowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4425991F2715990900DD2520 /* UserFollowTableViewCell.swift */; };
+		442599222715B54A00DD2520 /* NoNotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442599212715B54A00DD2520 /* NoNotificationsView.swift */; };
+		442599252715BC1700DD2520 /* NotificationFollowEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442599242715BC1700DD2520 /* NotificationFollowEventTableViewCell.swift */; };
+		442599272715BC2D00DD2520 /* NotificationLikeEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442599262715BC2D00DD2520 /* NotificationLikeEventTableViewCell.swift */; };
 		44D8ABBD2704219D001DE65B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D8ABBC2704219D001DE65B /* AppDelegate.swift */; };
 		44D8ABBF2704219D001DE65B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D8ABBE2704219D001DE65B /* SceneDelegate.swift */; };
 		44D8ABC42704219D001DE65B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44D8ABC22704219D001DE65B /* Main.storyboard */; };
@@ -82,6 +85,9 @@
 		4425991B271575C100DD2520 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		4425991D271594D400DD2520 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		4425991F2715990900DD2520 /* UserFollowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFollowTableViewCell.swift; sourceTree = "<group>"; };
+		442599212715B54A00DD2520 /* NoNotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoNotificationsView.swift; sourceTree = "<group>"; };
+		442599242715BC1700DD2520 /* NotificationFollowEventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationFollowEventTableViewCell.swift; sourceTree = "<group>"; };
+		442599262715BC2D00DD2520 /* NotificationLikeEventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationLikeEventTableViewCell.swift; sourceTree = "<group>"; };
 		44D8ABB92704219D001DE65B /* IgTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IgTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44D8ABBC2704219D001DE65B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44D8ABBE2704219D001DE65B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -228,6 +234,15 @@
 			path = "CollectionView Headers";
 			sourceTree = "<group>";
 		};
+		442599232715BBD800DD2520 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				442599242715BC1700DD2520 /* NotificationFollowEventTableViewCell.swift */,
+				442599262715BC2D00DD2520 /* NotificationLikeEventTableViewCell.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
 		44D8ABB02704219D001DE65B = {
 			isa = PBXGroup;
 			children = (
@@ -273,11 +288,13 @@
 		44D8ABDF27047C15001DE65B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				442599232715BBD800DD2520 /* Notifications */,
 				4425991227151D7800DD2520 /* CollectionView Headers */,
 				442599022714702B00DD2520 /* Cells */,
 				44D8ABC52704219F001DE65B /* Assets.xcassets */,
 				44D8ABD027046E9E001DE65B /* images */,
 				442598D42710947E00DD2520 /* Storyboards */,
+				442599212715B54A00DD2520 /* NoNotificationsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -373,6 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				442598E0271098FF00DD2520 /* ExploreViewController.swift in Sources */,
+				442599222715B54A00DD2520 /* NoNotificationsView.swift in Sources */,
 				442598DE271098E300DD2520 /* HomeViewController.swift in Sources */,
 				442598F82712BAFC00DD2520 /* DatabaseManager.swift in Sources */,
 				4425991E271594D400DD2520 /* SearchViewController.swift in Sources */,
@@ -389,8 +407,10 @@
 				442598E22710999600DD2520 /* AddViewController.swift in Sources */,
 				4425991127151D5D00DD2520 /* PhotoCollectionViewCell.swift in Sources */,
 				4425991427151E6900DD2520 /* ProfileInfoHeaderCollectionReusableView.swift in Sources */,
+				442599272715BC2D00DD2520 /* NotificationLikeEventTableViewCell.swift in Sources */,
 				442598DA2710988A00DD2520 /* LoginViewController.swift in Sources */,
 				44D8ABBD2704219D001DE65B /* AppDelegate.swift in Sources */,
+				442599252715BC1700DD2520 /* NotificationFollowEventTableViewCell.swift in Sources */,
 				4425990F271506AD00DD2520 /* FormTableViewCell.swift in Sources */,
 				442598FE2712C5D800DD2520 /* Extensions.swift in Sources */,
 				442599012714480D00DD2520 /* SettingsViewController.swift in Sources */,
