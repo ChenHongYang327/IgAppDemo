@@ -44,15 +44,14 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     public func configure(with model: UserPost){
         let thumbnailURL = model.thumbnailImage
         
-        URLSession.shared.dataTask(with: thumbnailURL) { data, _, error in
-            guard let data = data else {
+        Common.shard.fetchImage(with: thumbnailURL, imageView: photoImageView) { result in
+            switch result {
+            case .success(_):
+                return
+            case .failure(_):
                 return
             }
-
-            DispatchQueue.main.async {
-                self.photoImageView.image = UIImage(data: data)
-            }
-        }.resume()
+        }
     }
     
     public func configure(debug imageName: String){
