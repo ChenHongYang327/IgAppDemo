@@ -52,7 +52,7 @@ final class SettingsViewController: UIViewController {
                 self?.didTapInviteFriends()
             }),
             SettingCellModel(title: "Save Original Posts", handler: { [weak self] in
-                self?.didTapSaveOriginalPosts()
+                self?.didTapEditProfile()
             })
         ])
         data.append([
@@ -84,10 +84,11 @@ final class SettingsViewController: UIViewController {
         // show share sheet to invite friends
     }
     
-    private func didTapSaveOriginalPosts(){
+    private func didTapEditProfile(){
         let vc = EditProfileViewController()
         vc.title = "Edit Profile"
         let navVC = UINavigationController(rootViewController: vc)
+        navVC.modalPresentationStyle = .fullScreen
         present(navVC, animated: true)
     }
     
