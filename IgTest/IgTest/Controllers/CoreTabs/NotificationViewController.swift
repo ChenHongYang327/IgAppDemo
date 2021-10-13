@@ -59,7 +59,7 @@ class NotificationViewController: UIViewController, UITableViewDelegate, UITable
     
     private func fetchmodels(){
         for x in 0...50 {
-            let user = User(username: "Hank",
+            let user = User(username: "@Hank_Chen",
                             bio: "",
                             name: (first: "first", last: "last"),
                             profilePhoto: URL(string: "https://i.epochtimes.com/assets/uploads/2021/08/id13156667-shutterstock_376153318-450x322.jpg")!,
