@@ -157,7 +157,7 @@ extension PostViewController: UITableViewDelegate, UITableViewDataSource {
         case .header(_):
             return 70
         case .primaryContent(_):
-            return tableView.height
+            return tableView.width
         case .actions(_):
             return 60
         case .comments(_):
